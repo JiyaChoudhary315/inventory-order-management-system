@@ -15,7 +15,7 @@ from app.routes import order
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
-
+print("Starting Inventory Management System...")
 app = FastAPI(
     title="Inventory Management System",
     description="Inventory & Order Management API",
