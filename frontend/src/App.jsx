@@ -1,6 +1,6 @@
-import Products from "./pages/Products";
-import Customers from "./pages/Customers";
-import Orders from "./pages/Orders";
+import Products from "./pages/products";
+import Customers from "./pages/customers";
+import Orders from "./pages/orders";
 
 function App() {
   return (
