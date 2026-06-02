@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+print("=== MAIN.PY LOADED ===")
+
 from app.database import Base, engine
 
 # Import Models
@@ -13,9 +15,10 @@ from app.routes import product
 from app.routes import customer
 from app.routes import order
 
-# Create database tables
+print("=== CREATING DATABASE TABLES ===")
 Base.metadata.create_all(bind=engine)
-print("Starting Inventory Management System...")
+print("=== DATABASE TABLES CREATED ===")
+
 app = FastAPI(
     title="Inventory Management System",
     description="Inventory & Order Management API",
@@ -25,7 +28,7 @@ app = FastAPI(
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # For development
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -41,3 +44,5 @@ def root():
     return {
         "message": "Inventory Management System API Running"
     }
+
+print("=== FASTAPI APP STARTED ===")
