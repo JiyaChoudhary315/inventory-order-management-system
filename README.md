@@ -1,23 +1,38 @@
 # Inventory Order Management System
 
+## Live Demo
+
+Frontend:
+https://inventory-order-management-system-gamma.vercel.app
+
+Backend API:
+https://inventory-order-management-system-production-10ab.up.railway.app
+
+API Documentation:
+https://inventory-order-management-system-production-10ab.up.railway.app/docs
+
 ## Features
-- Product Management
-- Customer Management
-- Order Management
-- Inventory Tracking
+
+* Product Management
+* Customer Management
+* Order Management
+* Inventory Tracking
+* REST API with FastAPI
+* React Frontend
+* Dockerized Deployment
 
 ## Tech Stack
-- FastAPI
-- React
-- SQLite
-- Docker
 
-## Run Backend
-uvicorn app.main:app --reload
+* React
+* FastAPI
+* SQLAlchemy
+* SQLite
+* Docker
+* Railway
+* Vercel
 
-## Run Frontend
-npm install
-npm run dev
+## Local Setup
 
-## Docker
+```bash
 docker compose up --build
+```
